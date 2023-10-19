@@ -6,9 +6,19 @@
     <title>My cars</title>
 </head>
 <body>
-<div
-    th:each="car : ${mycars}">
-
+<div>
+    <table border="1">
+        <tr>
+            <th>Model</th>
+            <th>Series</th>
+            <th>Color</th>
+        </tr>
+        <tr th:each="car : ${mycars}">
+            <td th:text="${car.model}">Model</td>
+            <td th:text="${car.series}">Series</td>
+            <td th:text="${car.color}">Color</td>
+        </tr>
+    </table>
 </div>
 </body>
 </html>
